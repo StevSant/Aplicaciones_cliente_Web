@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <title>Mi CV</title>
+</head>
+
+
+<body>
+    <main class="main-content">
+        <header class="general-info">
+            <div class="chopped-picture">
+                <img src="fp.jpg" alt="Profile picture">
+            </div>
+            <h1>Menoscal Santana Bryan Steven</h1>
+            <div class="contact-info">
+                <p>
+                    Email:
+                    <a href="mailto:bryanmenoscal2005@gmail.com">bryanmenoscal2005@gmail.com</a>
+                </p>
+                |
+                <p>
+                    Numero de telefono
+                    <a href="tel:+593997399441">+593 99 739 9441</a>
+                </p>
+            </div>
+            <div class="social-media">
+                <a href="https://www.instagram.com/stevesant26/" target="_blank">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="https://github.com/SteveSant26" target="_blank">
+                    <i class="fa-brands fa-github"></i>
+
+                </a>
+            </div>
+        </header>
+
+        <section class="main-section">
+            <nav class="tabs">
+                <button onclick="showTab('data')">Datos personales</button>
+                <button onclick="showTab('studies')">Estudios realizados</button>
+                <button onclick="showTab('experience')">Experiencia laboral</button>
+                <button onclick="showTab('trainings')">Capacitaciones</button>
+                <button onclick="showTab('references')">Referencias</button>
+                <button onclick="showTab('skills')">Habilidades</button>
+            </nav>
+
+            <div class="tab" id="data">
+                <h2>Datos personales</h2>
+                <p><b>Dirección:</b> Ecuador, Manabí, Manta</p>
+                <p><b>Edad:</b> 19 años</p>
+            </div>
+            <div class="tab" id="studies">
+                <h2>Estudios realizados</h2>
+                <ul>
+                    <li>Bachiller en Ciencias - Unidad Educativa Fiscal Cinco de Junio (2017 - 2023)</li>
+                    <li>Ingenieria en sofwtare - Universidad Laica Eloy Alfaro (2023 - Actualidad)</li>
+                </ul>
+            </div>
+            <div class="tab" id="experience">
+                <h2>Experiencia laboral</h2>
+                <p>Ninguna</p>
+            </div>
+            <div class="tab" id="trainings">
+                <h2>Capacitaciones</h2>
+                <ul>
+                    <li>Curso de JavaScript y TypeScript (2025)</li>
+                </ul>
+            </div>
+            <div class="tab" id="references">
+                <h2>Referencias personales</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Cargo / Profesión</th>
+                            <th>Teléfono</th>
+                            <th>Correo Electrónico</th>
+                        </tr>
+                    </thead>
+                    <tbody id="ref-table-body">
+                    </tbody>
+                </table>
+            </div>
+            <div class="tab" id="skills">
+                <h2>Mis habilidades</h2>
+            </div>
+        </section>
+
+
+    </main>
+
+    <script>
+        function showReferences() {
+            const references = [
+                {
+                    name: "Kevin Romero",
+                    charge: "Ingeniero de Software",
+                    phone: "+593 6 219 1334",
+                    email: "kevinromero@gmail.com"
+                },
+                {
+                    name: "Kerly Menoscal",
+                    charge: "Profesora",
+                    phone: "+593 93 966 2434",
+                    email: "kerly99@gmail.com"
+                },
+                {
+                    name: "Lady Menoscal",
+                    charge: "Contadora",
+                    phone: "+593 96 381 2785",
+                    email: "laddy22_@gmal.com"
+                }
+            ];
+            const tableBody = document.getElementById('ref-table-body');
+            references.forEach(ref => {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+              <td>${ref.name}</td>
+              <td>${ref.charge}</td>
+              <td>${ref.phone}</td>
+              <td>${ref.email}</td>
+            `;
+                tableBody.appendChild(row);
+            });
+        }
+
+        function showSkills() {
+            const skills = [
+                { name: 'Python', progress: 85 },
+                { name: 'Cpp', progress: 70 },
+                { name: 'C', progress: 65 },
+                { name: 'HTML', progress: 60 },
+                { name: 'Sql', progress: 60 },
+                { name: 'Css', progress: 50 },
+                { name: 'JavaScript', progress: 50 },
+                { name: 'Java', progress: 50 },
+                { name: 'TypeScript', progress: 45 },
+            ]
+            const skillsContainer = document.getElementById('skills');
+            skills.forEach(skill => {
+                const skillDiv = document.createElement('div');
+                skillDiv.className = 'skill';
+
+                skillDiv.innerHTML = `
+                  <label for="${skill.name}"  class="skill-name">${skill.name} (${skill.progress}%)</label>
+                  <progress id="${skill.name}" value="${skill.progress}" max="100"></progress>`;
+
+                skillsContainer.appendChild(skillDiv);
+            })
+        }
+
+        function showTab(tabId) {
+            const tabs = document.querySelectorAll('.tab');
+            tabs.forEach(tab => tab.classList.remove('active'));
+
+            const activeTab = document.getElementById(tabId);
+            if (activeTab) activeTab.classList.add('active');
+
+            const buttons = document.querySelectorAll('.tabs button');
+            buttons.forEach(btn => btn.classList.remove('active-tab'));
+
+            buttons.forEach(btn => {
+                if (btn.getAttribute('onclick').includes(tabId)) {
+                    btn.classList.add('active-tab');
+                }
+            });
+        }
+
+        window.onload = function () {
+            showTab('data');
+            showSkills();
+            showReferences();
+        };
+    </script>
+</body>
+
+</html>

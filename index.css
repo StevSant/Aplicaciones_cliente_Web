@@ -1,0 +1,175 @@
+:root {
+    --primary-color: #4a90e2;
+    --primary-hover: #2f619b;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f5f7f8;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+}
+
+.main-content {
+    width: 85%;
+    max-width: 1000px;
+    margin: 40px auto;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 30px;
+}
+
+.general-info { 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 20px;
+}
+
+.chopped-picture {
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 50%;
+    border: 3px solid #5d8aa8;
+    margin-bottom: 10px;
+}
+
+.chopped-picture img {
+    width: 100%;
+    object-fit: cover;
+}
+
+h1 {
+    margin: 10px 0;
+    color: #2d4059;
+}
+
+.contact-info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    font-size: 0.95rem;
+}
+
+.contact-info p {
+    font-size: 1rem;
+    margin: 0;
+}
+
+.contact-info a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+.social-media {
+    display: flex;
+    align-items: center;
+    width: 75px;
+    justify-content: space-between;
+}
+
+.social-media a {
+    color: var(--primary-color);
+    font-size: 2rem;
+    text-decoration: none;
+}
+
+.social-media a:hover {
+    color: var(--primary-hover);
+    transform: scale(1.15);
+}
+
+.main-section>div {
+    margin-top: 30px;
+    padding-left: 1rem;
+}
+
+.tab {
+    display: none;
+}
+
+.tab.active {
+    display: block;
+}
+
+.tabs {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.tabs button {
+    padding: 10px 15px;
+    cursor: pointer;
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+}
+
+.tabs button:hover {
+    background-color: var(--primary-hover);
+}
+
+.tabs button.active-tab {
+    background-color: var(--primary-hover);
+    font-weight: bold;
+}
+
+h2 {
+    color: #2d4059;
+    margin-bottom: 10px;
+}
+
+ul {
+    margin: 0;
+    padding-left: 20px;
+}
+
+table {
+    width: 95%;
+    margin-top: 10px;
+    border-collapse: collapse;
+    background-color: #fdfdfd;
+    border: 1px solid #ccc;
+}
+
+th,
+td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #e2eafc;
+    color: #2d4059;
+}
+
+tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+.skill {
+    margin-bottom: 15px;
+}
+
+.skill-name {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+progress {
+    width: 100%;
+    height: 20px;
+}
