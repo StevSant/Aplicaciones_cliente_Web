@@ -1,0 +1,108 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+body {
+    font-family: "Helvetica Neue", sans-serif;
+    background: linear-gradient(to left, #2196f3, #009688), url(fondo.png);
+    background-blend-mode: overlay;
+}
+
+.main-container {
+    margin: 50px auto;
+    border-radius: 10px;
+    max-width: 500px;
+}
+
+#header {
+    color: #fff;
+    background-color: #3f51b5;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+#header h1 {
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+.container {
+    margin: 2rem 0;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 2px 2px 10px -3px rgba(0, 0, 0, 0.2);
+}
+
+.element {
+    min-height: 70px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #f1f1f1;
+    border-top: 1px solid #f1f1f1;
+    padding: 0.5rem;
+}
+
+#list-of-people li {
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 200;
+    margin-left: 1rem;
+}
+
+.add-person {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.add-person button {
+    min-height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    border: none;
+    background-color: #3f51b5;
+    color: #fff;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+#formAddPerson {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+}
+
+#formAddPerson div {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+#formAddPerson input[type="text"],
+#formAddPerson input[type="number"] {
+    text-align: center;
+    height: 50px;
+    border: none;
+    background: transparent;
+    font-weight: 200;
+    width: 200px;
+    border-bottom: 2px solid #ccc;
+    transition: border-color 0.3s;
+}
+
+#formAddPerson input[type="text"]:focus,
+#formAddPerson input[type="number"]:focus {
+    outline: none;
+    border-bottom-color: #3f51b5;
+}
+
+::placeholder {
+    color: grey;
+    opacity: 1;
+}
