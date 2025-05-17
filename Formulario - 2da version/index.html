@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Esta es una app para listar clientes" />
+  <meta name="keywords" content="listing" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Registro de clientes</title>
+</head>
+
+<body>
+  <main class="main-container">
+    <div class="container" id="header">
+      <h1>Registro de clientes</h1>
+    </div>
+    <div class="container">
+      <div class="element">
+        <ul id="list-of-people">
+          <li>Bryan Menoscal</li>
+        </ul>
+      </div>
+    </div>
+    <div class="container">
+      <form id="formAddPerson">
+        <div>
+          <input type="text" name="id" placeholder="Ingrese su identificación" />
+          <input type="email" name="email" placeholder="Ingrese su email" />
+        </div>
+        <div>
+          <input type="text" name="name" placeholder="Ingrese su nombre" />
+          <input type="text" name="lastName" placeholder="Ingrese su apellido" />
+        </div>
+        <div>
+          <input type="number" name="age" placeholder="Ingrese su edad" />
+          <input type="text" name="country" placeholder="Ingrese su país de nacimiento" />
+        </div>
+        <div class="add-person">
+          <button type="submit">+</button>
+        </div>
+      </form>
+    </div>
+  </main>
+  <script src="index.js"></script>
+</body>
+
+</html>
