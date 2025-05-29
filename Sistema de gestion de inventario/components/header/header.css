@@ -1,0 +1,64 @@
+.navbar {
+    background-color: var(--primary-color);
+    border-bottom: 1px solid var(--highlight-color);
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0.5rem 3rem;
+    max-height: 100px;
+}
+
+.navbar a {
+
+
+    color: var(--white-color);
+}
+
+.navbar.fixed-top {
+    padding-top: 0;
+    padding-bottom: 0;
+    box-shadow: none;
+    border-bottom: #dee2e6 1px solid;
+    align-items: stretch;
+    height: 61px;
+}
+
+
+.fixed-top {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+}
+
+.navbar img {
+    width: 30px;
+    max-height: 35px;
+    display: block;
+    cursor: pointer;
+}
+
+
+.navbar .home-btn {
+    background-color: var(--secondary-btn-color);
+    padding: 20px;
+}
+
+.navbar .login-btn {
+    padding: 20px;
+
+}
+
+.navbar .login-btn:hover {
+    text-decoration: underline;
+}
+
+.navbar-brand,
+.navbar-auth {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}

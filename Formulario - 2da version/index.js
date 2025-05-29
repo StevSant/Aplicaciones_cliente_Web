@@ -1,4 +1,4 @@
-// Se usa ^ y $ cuandp la cadena debe coincidir completamente
+// Se usa ^ y $ cuando la cadena debe coincidir completamente
 // Regex es una herramienta de caracteres especiales que permiten definir patrones
 
 // .  Cualquier carácter (excepto salto de línea)
@@ -31,7 +31,7 @@ function validateEmail(email) {
   // \.           → Punto literal (el punto se escapa con \)
   // [^\s@]+      → Uno o más caracteres (ej: "com", "org", etc.)
   // $            → Fin de la cadena
-  const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  const regex = /^[^\s@]+@[^\s@0-9]+\.[^\s@]+$/;
 
   return regex.test(email);
 }
