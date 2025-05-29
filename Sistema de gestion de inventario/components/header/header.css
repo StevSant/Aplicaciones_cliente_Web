@@ -9,11 +9,6 @@
     max-height: 100px;
 }
 
-.navbar a {
-
-
-    color: var(--white-color);
-}
 
 .navbar.fixed-top {
     padding-top: 0;
@@ -43,15 +38,26 @@
 
 .navbar .home-btn {
     background-color: var(--secondary-btn-color);
-    padding: 20px;
 }
 
-.navbar .login-btn {
+.navbar .home-btn,
+.navbar .login-btn-nav {
     padding: 20px;
-
+    color: var(--white-color);
+    font-size: 1rem;
 }
 
-.navbar .login-btn:hover {
+
+.navbar #logout {
+    background-color: transparent;
+    border: none;
+    padding: 20px;
+    display: none;
+}
+
+
+
+.navbar .login-btn-nav:hover {
     text-decoration: underline;
 }
 
