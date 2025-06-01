@@ -1,3 +1,4 @@
+/* Contenedor principal de la barra de navegación */
 .navbar {
     background-color: var(--primary-color);
     border-bottom: 1px solid var(--highlight-color);
@@ -9,7 +10,7 @@
     max-height: 100px;
 }
 
-
+/* Estilo adicional cuando la navbar está fija arriba */
 .navbar.fixed-top {
     padding-top: 0;
     padding-bottom: 0;
@@ -19,15 +20,16 @@
     height: 61px;
 }
 
-
+/* Hace que la navbar se mantenga fija en la parte superior */
 .fixed-top {
-    position: fixed;
+    position: sticky;
     top: 0;
     right: 0;
     left: 0;
     z-index: 1030;
 }
 
+/* Logo o ícono dentro de la navbar */
 .navbar img {
     width: 30px;
     max-height: 35px;
@@ -35,11 +37,12 @@
     cursor: pointer;
 }
 
-
+/* Botón principal (como "Inicio") */
 .navbar .home-btn {
     background-color: var(--secondary-btn-color);
 }
 
+/* Estilos compartidos entre botones */
 .navbar .home-btn,
 .navbar .login-btn-nav {
     padding: 20px;
@@ -47,7 +50,7 @@
     font-size: 1rem;
 }
 
-
+/* Botón de logout oculto por defecto */
 .navbar #logout {
     background-color: transparent;
     border: none;
@@ -55,12 +58,12 @@
     display: none;
 }
 
-
-
+/* Efecto hover para botón de login */
 .navbar .login-btn-nav:hover {
     text-decoration: underline;
 }
 
+/* Agrupación de elementos (marca y botones) */
 .navbar-brand,
 .navbar-auth {
     display: flex;
@@ -68,3 +71,4 @@
     justify-content: center;
     gap: 1rem;
 }
+

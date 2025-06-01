@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "name": "Computadora HP",
+    "categoryId": 1,
+    "courseId": 101
+  },
+  {
+    "id": 2,
+    "name": "Proyector Epson",
+    "categoryId": 2,
+    "courseId": 102
+  },
+  {
+    "id": 3,
+    "name": "Impresora Canon",
+    "categoryId": 3,
+    "courseId": 101
+  },
+  {
+    "id": 4,
+    "name": "Monitor Samsung",
+    "categoryId": 4,
+    "courseId": 101
+  },
+  {
+    "id": 5,
+    "name": "Teclado Logitech",
+    "categoryId": 5,
+    "courseId": 101
+  },
+  {
+    "id": 6,
+    "name": "Mouse Genius",
+    "categoryId": 6,
+    "courseId": 101
+  }
+]
