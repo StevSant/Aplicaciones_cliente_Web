@@ -1,0 +1,41 @@
+<div class="calculator-container">
+  <h1>Calculadora Angular con Signals</h1>
+  <div class="calculator-form">
+    <div class="input-group">
+      <label for="firstNumber">Primer número:</label>
+      <input type="number" id="firstNumber" [value]="firstNumber()" (input)="updateFirstNumber($event)"
+        placeholder="Ingresa el primer número">
+    </div>
+
+    <div class="input-group">
+      <label for="operation">Operación:</label>
+      <select id="operation" [value]="selectedOperation()" (change)="updateOperation($event)">
+        @for (op of operations; track op.value) {
+        <option [value]="op.value">
+          {{ op.label }}
+        </option>
+        }
+      </select>
+    </div>
+
+    <div class="input-group">
+      <label for="secondNumber">Segundo número:</label>
+      <input type="number" id="secondNumber" [value]="secondNumber()" (input)="updateSecondNumber($event)"
+        placeholder="Ingresa el segundo número">
+    </div>
+
+    <div class="result-section">
+      <h2>Resultado:</h2>
+      <div class="result-display">
+        {{ firstNumber() }}
+        {{ getOperationSymbol(selectedOperation()) }}
+        {{ secondNumber() }} =
+        <strong>{{ result() }}</strong>
+      </div>
+    </div>
+
+    <button class="clear-button" (click)="clear()">
+      Limpiar
+    </button>
+  </div>
+</div>
