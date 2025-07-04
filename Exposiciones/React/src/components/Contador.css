@@ -1,0 +1,53 @@
+.contador-container {
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 20px;
+  background-color: #f9f9f9;
+  display: inline-block;
+  min-width: 250px;
+}
+
+.contador-titulo {
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.contador-valor {
+  font-size: 2em;
+  font-weight: bold;
+  color: #007acc;
+  margin: 10px 0;
+}
+
+.contador-botones {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.contador-btn {
+  padding: 8px 16px;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: opacity 0.2s ease;
+}
+
+.contador-btn:hover {
+  opacity: 0.8;
+}
+
+.contador-btn--decrementar {
+  background-color: #ff4757;
+}
+
+.contador-btn--reiniciar {
+  background-color: #ffa502;
+}
+
+.contador-btn--incrementar {
+  background-color: #2ed573;
+}
